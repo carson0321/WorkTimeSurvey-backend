@@ -3230,6 +3230,96 @@
   },
   {
     "type": "get",
+    "url": "/campaigns/:campaign_name",
+    "title": "查詢 campaign_name 薪資與工時資料 API",
+    "group": "Workings",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "\"created_at\"",
+              "\"week_work_time\"",
+              "\"estimated_hourly_wage\""
+            ],
+            "optional": true,
+            "field": "sorted_by",
+            "defaultValue": "created_at",
+            "description": "<p>單筆資料排序的方式</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "\"descending\"",
+              "\"ascending\""
+            ],
+            "optional": true,
+            "field": "order",
+            "defaultValue": "descending",
+            "description": "<p>資料排序由大到小或由小到大。無資料者會被排到最下方</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "\"0\""
+            ],
+            "optional": true,
+            "field": "page",
+            "defaultValue": "0",
+            "description": "<p>分頁號碼</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "allowedValues": [
+              "\"0 < limit <= 50\""
+            ],
+            "optional": true,
+            "field": "limit",
+            "defaultValue": "25",
+            "description": "<p>單頁資料筆數</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String[]",
+            "optional": true,
+            "field": "job_titles",
+            "description": "<p>要搜尋的職稱</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>總資料數</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "time_and_salary",
+            "description": "<p>薪時資料</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "routes/workings/index.js",
+    "groupTitle": "Workings",
+    "name": "GetCampaignsCampaign_name"
+  },
+  {
+    "type": "get",
     "url": "/workings",
     "title": "查詢薪資與工時資料 API",
     "group": "Workings",
@@ -3295,13 +3385,6 @@
             "optional": false,
             "field": "total",
             "description": "<p>總資料數</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "page",
-            "description": "<p>目前在資料的第幾頁</p>"
           },
           {
             "group": "Success 200",
