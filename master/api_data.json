@@ -438,6 +438,27 @@
             "optional": false,
             "field": "experiences.report_count",
             "description": "<p>檢舉數</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "experiences.archive",
+            "description": "<p>封存</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "experiences.archive.reason",
+            "description": "<p>封存理由</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "experiences.archive.is_achived",
+            "description": "<p>是否封存</p>"
           }
         ],
         "interview": [
@@ -1068,6 +1089,27 @@
             "optional": false,
             "field": "experiences.report_count",
             "description": "<p>檢舉數</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "experiences.archive",
+            "description": "<p>封存</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "experiences.archive.reason",
+            "description": "<p>封存理由</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "experiences.archive.is_achived",
+            "description": "<p>是否封存</p>"
           }
         ],
         "interview": [
@@ -2176,7 +2218,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "routes/jobs.js",
+    "filename": "routes/jobs/index.js",
     "groupTitle": "Jobs",
     "name": "GetJobsSearch"
   },
@@ -2341,6 +2383,27 @@
             "optional": false,
             "field": "experience.status",
             "description": "<p>狀態</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "experiences.archive",
+            "description": "<p>封存</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "experiences.archive.reason",
+            "description": "<p>封存理由</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "experiences.archive.is_achived",
+            "description": "<p>是否封存</p>"
           }
         ],
         "interview": [
@@ -2769,6 +2832,27 @@
             "optional": false,
             "field": "time_and_salary.status",
             "description": "<p>狀態</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object",
+            "optional": false,
+            "field": "time_and_salary.archive",
+            "description": "<p>封存</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "time_and_salary.archive.reason",
+            "description": "<p>封存理由</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "time_and_salary.archive.is_achived",
+            "description": "<p>是否封存</p>"
           }
         ]
       }
