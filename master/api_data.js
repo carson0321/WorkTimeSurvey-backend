@@ -802,7 +802,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "interview_result",
-            "description": "<p>面試結果 ( <code>錄取</code> <code>未錄取</code> <code>沒通知</code>或其他 0 &lt; length &lt;= 10 的字串 )</p>"
+            "description": "<p>面試結果 ( <code>錄取</code> <code>未錄取</code> <code>沒通知</code>或其他 0 &lt; length &lt;= 100 的字串 )</p>"
           },
           {
             "group": "interview",
@@ -1981,7 +1981,7 @@ define({ "api": [
             "group": "Parameter",
             "type": "String",
             "allowedValues": [
-              "\"錄取,未錄取,沒通知,或其他 0 < length <= 10 的字串\""
+              "\"錄取,未錄取,沒通知,或其他 0 < length <= 100 的字串\""
             ],
             "optional": false,
             "field": "interview_result",
